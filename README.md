@@ -39,8 +39,8 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- [TailwindCss](https://tailwindcss.com/)
 - Mobile-first workflow
+- [TailwindCSS](https://tailwindcss.com/)
 - [React](https://reactjs.org/) - JS library
 - TypeScript
 - [React Query](https://tanstack.com/query/latest)

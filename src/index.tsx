@@ -1,8 +1,6 @@
 import { createRoot } from "react-dom/client";
-
-const Application = () => {
-  return <h1>Rest Countries Api Begins 🇳🇬</h1>;
-};
+import Application from "./components/Application";
+import React from "react";
 
 const container = document.getElementById("root");
 
@@ -10,4 +8,8 @@ if (!container) {
   throw new Error("no container to render to");
 }
 const root = createRoot(container);
-root.render(<Application />);
+root.render(
+  <React.StrictMode>
+    <Application />
+  </React.StrictMode>,
+);
