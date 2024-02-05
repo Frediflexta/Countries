@@ -2,10 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,html}"],
   theme: {
-    extend: {
-      fontFamily: {
-        nunito: ["'Nunito Sans', sans-serif"],
-      },
+    extend: {},
+    fontFamily: {
+      nunito: ["'Nunito Sans', sans-serif"],
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-unsafe-call

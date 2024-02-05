@@ -4,7 +4,7 @@ import SearchFilter from "./SearchFilter";
 
 const Application = () => {
   return (
-    <main className="flex h-screen w-full flex-col bg-[#F2F2F2] font-nunito">
+    <main className="font-nunito">
       <Header />
       <SearchFilter />
       <Countries />
