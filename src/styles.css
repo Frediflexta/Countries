@@ -11,5 +11,13 @@
     .grey-out-placeholder::placeholder {
       @apply font-normal text-sm text-gray-400
     }
+
+    .bold_span {
+      @apply font-semibold
+    }
+
+    .extra_thin_span {
+      @apply font-extralight
+    }
   }
 }
