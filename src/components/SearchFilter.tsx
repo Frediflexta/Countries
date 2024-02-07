@@ -15,10 +15,10 @@ const SearchFilter = () => {
       </div>
       <div className="pt-5 sm:pt-0">
         <select
+          defaultValue="Filter by Region"
           className="h-20 w-1/2 rounded-[5px] border-gray-100 pl-8 text-sm shadow-sm sm:h-14 sm:w-[200px]"
           name="countries"
           id="region"
-          defaultValue="Filter by Region"
         >
           <option value="Africa">Africa</option>
           <option value="America">America</option>
