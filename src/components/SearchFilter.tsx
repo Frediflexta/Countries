@@ -18,10 +18,8 @@ const SearchFilter = () => {
           className="h-20 w-1/2 rounded-[5px] border-gray-100 pl-8 text-sm shadow-sm sm:h-14 sm:w-[200px]"
           name="countries"
           id="region"
+          defaultValue="Filter by Region"
         >
-          <option disabled selected hidden>
-            Filter by Region
-          </option>
           <option value="Africa">Africa</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>

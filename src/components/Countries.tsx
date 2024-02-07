@@ -1,19 +1,30 @@
+import useCountries from "../hooks/useCountries";
 import Country from "./Country";
-import data from "../data.json";
 
 const Countries = () => {
+  const { data, isLoading, isError, error } = useCountries();
+  if (isLoading) {
+    return <span>Loading...</span>;
+  }
+
+  if (isError) {
+    return <span>Error: {error.message}</span>;
+  }
+  console.log(data);
   return (
     <section className="flex justify-center px-5 pt-8 sm:px-24 md:px-24">
       <div className="flex flex-col sm:flex-row">
-        <div className="px-8 py-8">
-          <Country
-            name={data[190].name}
-            image={data[190].flags.svg}
-            region={data[190].region}
-            capital={data[190].capital as string}
-            population={data[190].population}
-          />
-        </div>
+        {data?.map(({ name, flags, region, capital, population }) => (
+          <div key={name} className="px-8 py-8">
+            <Country
+              name={name}
+              image={flags.png}
+              region={region}
+              capital={capital}
+              population={population}
+            />
+          </div>
+        ))}
       </div>
     </section>
   );
