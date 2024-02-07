@@ -15,13 +15,14 @@ const Countries = () => {
     <section className="flex justify-center px-5 pt-8 sm:px-24 md:px-24">
       <div className="flex flex-col sm:flex-row">
         {data?.map(({ name, flags, region, capital, population }) => (
-          <div key={name} className="px-8 py-8">
+          <div key={name.common} className="px-8 py-8">
             <Country
-              name={name}
+              name={name.common}
               image={flags.png}
               region={region}
-              capital={capital}
+              capital={capital && Array.isArray(capital) ? capital[0] : ""}
               population={population}
+              alt={flags.alt}
             />
           </div>
         ))}
