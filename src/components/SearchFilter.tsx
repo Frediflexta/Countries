@@ -1,6 +1,6 @@
 const SearchFilter = () => {
   return (
-    <section className="sm:flex items-center justify-between pt-12 sm:px-20 px-5">
+    <section className="items-center justify-between px-5 pt-12 sm:flex sm:px-20">
       <div className="relative">
         <img
           className="h-4.5 w-4.5 absolute left-5 top-1/2 -translate-y-1/2 transform text-gray-400"
@@ -9,13 +9,13 @@ const SearchFilter = () => {
         />
         <input
           type="text"
-          className="grey-out-placeholder h-[56px] sm:w-[480px] w-full rounded-[5px] border-gray-100 py-2 pl-12 pr-3 shadow-md focus:ring-gray-50"
+          className="grey-out-placeholder h-[56px] w-full rounded-[5px] border-gray-100 py-2 pl-12 pr-3 shadow-md focus:ring-gray-50 sm:w-[480px]"
           placeholder="Search for a country..."
         />
       </div>
-      <div className="sm:pt-0 pt-5">
+      <div className="pt-5 sm:pt-0">
         <select
-          className="h-[56px] sm:w-[200px] w-full rounded-[5px] border-gray-100 text-sm"
+          className="h-[56px] w-full rounded-[5px] border-gray-100 text-sm sm:w-[200px]"
           name="countries"
           id="region"
         >
