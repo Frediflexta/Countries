@@ -14,7 +14,7 @@ const Country = ({
   capital,
 }: CountryProps) => {
   return (
-    <div className="h-[336px] rounded-md bg-white text-[#111517] shadow-md sm:w-[264px] md:w-[264px]">
+    <div className="h-[336px] rounded-md bg-white text-[#111517] shadow-sm sm:w-[264px] md:w-[264px]">
       <img
         className="block max-h-40 w-full rounded-tl-md rounded-tr-md object-cover"
         src={image}

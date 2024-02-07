@@ -1,6 +1,6 @@
 const Header = () => {
   return (
-    <header className="flex h-20 w-full items-center justify-between bg-white px-5 leading-9 shadow sm:px-20">
+    <header className="flex h-28 w-full items-center justify-between bg-white px-5 leading-9 shadow sm:h-20 sm:px-20">
       <h3 className="text-xl font-extrabold sm:text-2xl">
         Where in the world?
       </h3>
@@ -10,7 +10,9 @@ const Header = () => {
           src="../Web/svg/dark_mode-icon.svg"
           alt="cresent moon"
         />
-        <figcaption className="text-base font-normal">Dark Mode</figcaption>
+        <figcaption className="pr-2 text-base font-normal">
+          Dark Mode
+        </figcaption>
       </figure>
     </header>
   );

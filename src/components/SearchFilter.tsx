@@ -9,17 +9,17 @@ const SearchFilter = () => {
         />
         <input
           type="text"
-          className="grey-out-placeholder h-[56px] w-full rounded-[5px] border-gray-100 py-2 pl-12 pr-3 shadow-md focus:ring-gray-50 sm:w-[480px]"
+          className="grey-out-placeholder h-20 w-full rounded-[5px] border-gray-100 py-2 pl-16 pr-3 shadow-sm focus:ring-gray-50 sm:h-14 sm:w-[480px]"
           placeholder="Search for a country..."
         />
       </div>
       <div className="pt-5 sm:pt-0">
         <select
-          className="h-[56px] w-full rounded-[5px] border-gray-100 text-sm sm:w-[200px]"
+          className="h-20 w-1/2 rounded-[5px] border-gray-100 pl-8 text-sm shadow-sm sm:h-14 sm:w-[200px]"
           name="countries"
           id="region"
         >
-          <option value="" disabled selected hidden>
+          <option disabled selected hidden>
             Filter by Region
           </option>
           <option value="Africa">Africa</option>
