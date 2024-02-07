@@ -3,7 +3,7 @@ import data from "../data.json";
 
 const Countries = () => {
   return (
-    <section className="pl-20 pt-14">
+    <section className="sm:px-20 px-5 pt-14">
       <Country
         name={data[190].name}
         image={data[190].flags.svg}
