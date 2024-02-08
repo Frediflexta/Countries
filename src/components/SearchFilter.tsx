@@ -1,4 +1,13 @@
+import { useState } from "react";
+// import { Region } from "../global";
+// import useCountries from "../hooks/useCountries";
+
+const Regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
+
 const SearchFilter = () => {
+  const [region, setRegion] = useState("");
+  // const {} = useCountries();
+
   return (
     <section className="items-center justify-between px-5 pt-12 sm:flex sm:px-20">
       <div className="relative">
@@ -15,16 +24,20 @@ const SearchFilter = () => {
       </div>
       <div className="pt-5 sm:pt-0">
         <select
-          defaultValue="Filter by Region"
           className="h-20 w-1/2 rounded-[5px] border-gray-100 pl-8 text-sm shadow-sm sm:h-14 sm:w-[200px]"
           name="countries"
           id="region"
+          value={region}
+          onChange={(e) => setRegion(e.target.value)}
         >
-          <option value="Africa">Africa</option>
-          <option value="America">America</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Oceania">Oceania</option>
+          <option value="" disabled hidden>
+            Filter by Region
+          </option>
+          {Regions.map((region) => (
+            <option value={region} key={region}>
+              {region}
+            </option>
+          ))}
         </select>
       </div>
     </section>
