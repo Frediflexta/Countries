@@ -95,10 +95,9 @@ interface CountryData {
 
 export type CountryResponse = CountryData[];
 
-export declare type Region =
+export declare type Regions =
   | "Africa"
   | "America"
   | "Asia"
   | "Europe"
-  | "Oceania"
-  | "Filter by Region";
+  | "Oceania";

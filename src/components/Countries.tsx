@@ -20,6 +20,7 @@ const Countries = () => {
   if (isError) {
     return <span>Error: {error.message}</span>;
   }
+
   return (
     <section className="flex justify-center px-5 pt-8 sm:px-24 md:px-20">
       <div className="flex flex-col flex-wrap sm:flex-row">
