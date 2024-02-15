@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 type CountryProps = {
   name: string;
   image: string;
@@ -15,12 +17,14 @@ const Country = ({
   capital,
   alt,
 }: CountryProps) => {
+  const navigate = useNavigate();
+
   return (
     <div
       className="h-[336px] cursor-pointer rounded-md bg-white text-[#111517] shadow-sm dark:bg-[#2B3844] dark:text-white sm:w-[264px] md:w-[264px]"
       role="presentation"
       onClick={() => {
-        console.log("Card clicked");
+        navigate(`/countrydetails/${name}`);
       }}
     >
       <img

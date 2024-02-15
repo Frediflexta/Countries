@@ -50,7 +50,7 @@ interface PostalCode {
   regex: string;
 }
 
-interface CountryData {
+export interface CountryData {
   name: Name;
   tld: string[];
   cca2: string;
@@ -92,6 +92,18 @@ interface CountryData {
   capitalInfo: Capital;
   postalCode: PostalCode;
 }
+
+type UpdateRegionAction = {
+  type: "updateRegion";
+  payload: string;
+};
+
+type UpdateCountryAction = {
+  type: "updateCountry";
+  payload: string;
+};
+
+export type ActionType = UpdateCountryAction | UpdateRegionAction;
 
 export type CountryResponse = CountryData[];
 

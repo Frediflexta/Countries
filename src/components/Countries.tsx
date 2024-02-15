@@ -2,8 +2,13 @@ import { MagnifyingGlass } from "react-loader-spinner";
 import useCountries from "../hooks/useCountries";
 import Country from "./Country";
 
-const Countries = () => {
+type CountriesProps = {
+  country: string;
+};
+
+const Countries = ({ country }: CountriesProps) => {
   const { data, isLoading, isError, error } = useCountries();
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center">

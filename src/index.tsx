@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import Application from "./components/Application";
 import React from "react";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
@@ -14,9 +15,11 @@ if (!container) {
 const root = createRoot(container);
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <Application />
-      <ReactQueryDevtools />
-    </QueryClientProvider>
+    <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <Application />
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 );
