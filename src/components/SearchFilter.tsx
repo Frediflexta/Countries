@@ -13,9 +13,9 @@ type SearchFilterProps = {
 };
 
 const SearchFilter = ({ country, region, dispatch }: SearchFilterProps) => {
-  const debouncedCountry = useDebounce(country, 500);
+  const debounceCountry = useDebounce(country, 500);
 
-  const { data } = useCountry(debouncedCountry);
+  const { data } = useCountry(debounceCountry);
   const navigate = useNavigate();
   console.log({ data });
 
