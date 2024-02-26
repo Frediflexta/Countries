@@ -103,7 +103,15 @@ type UpdateCountryAction = {
   payload: string;
 };
 
-export type ActionType = UpdateCountryAction | UpdateRegionAction;
+type UpdateCountryData = {
+  type: "updateCountryData";
+  payload: CountryData;
+};
+
+export type ActionType =
+  | UpdateCountryAction
+  | UpdateRegionAction
+  | UpdateCountryData;
 
 export type CountryResponse = CountryData[];
 

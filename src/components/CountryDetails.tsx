@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import { CountryData } from "../global";
 
 type CountryDetailsProps = {
-  country: string;
+  country: CountryData | null;
 };
 
 const CountryDetails = ({ country }: CountryDetailsProps) => {
+  console.log({ country_Details: country });
   return (
     <div>
       <div className="w-full p-20">
@@ -18,7 +20,7 @@ const CountryDetails = ({ country }: CountryDetailsProps) => {
           </figure>
         </Link>
       </div>
-      <div>Country details: {country}</div>
+      <div>Country details: {JSON.stringify(country, null, 2)}</div>
     </div>
   );
 };

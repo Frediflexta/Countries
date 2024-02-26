@@ -21,7 +21,6 @@ export const fetchRegions = async (
 };
 
 export const fetchCountry = async (country: string): Promise<CountryData> => {
-  console.log("fectchCountry", country);
   const res = await fetch(
     `https://restcountries.com/v3.1/name/${country}?fullText=true`,
   );

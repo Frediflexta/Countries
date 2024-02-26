@@ -1,13 +1,15 @@
-import { ActionType } from "../global";
+import { ActionType, CountryData } from "../global";
 
 type InititalState = {
   region: string;
   country: string;
+  countryData: CountryData | null;
 };
 
 export const initialState: InititalState = {
   region: "",
   country: "",
+  countryData: null,
 };
 
 export const regionCountryReducer = (
@@ -19,6 +21,8 @@ export const regionCountryReducer = (
       return { ...state, region: action.payload };
     case "updateCountry":
       return { ...state, country: action.payload };
+    case "updateCountryData":
+      return { ...state, countryData: action.payload };
     default:
       return state;
   }

@@ -2,11 +2,7 @@ import { MagnifyingGlass } from "react-loader-spinner";
 import useCountries from "../hooks/useCountries";
 import Country from "./Country";
 
-type CountriesProps = {
-  country: string;
-};
-
-const Countries = ({ country }: CountriesProps) => {
+const Countries = () => {
   const { data, isLoading, isError, error } = useCountries();
 
   if (isLoading) {
