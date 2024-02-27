@@ -5,6 +5,7 @@ const useRegions = (region: string) => {
   return useQuery({
     queryKey: ["regions", region],
     queryFn: ({ queryKey }) => fetchRegions(queryKey[1]),
+    enabled: !!region,
   });
 };
 

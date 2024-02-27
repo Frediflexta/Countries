@@ -14,7 +14,7 @@ const Application = () => {
   );
 
   // const location = useLocation();
-  console.info({ countryData });
+  console.info("Application => ", region);
 
   return (
     <main className="w-screen font-nunito dark:bg-[#202C36] sm:w-screen">
@@ -29,7 +29,7 @@ const Application = () => {
                 region={region}
                 dispatch={dispatch}
               />
-              <Countries />
+              <Countries region={region} />
             </>
           }
         />

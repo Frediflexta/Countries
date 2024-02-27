@@ -105,7 +105,8 @@ type UpdateCountryAction = {
 
 type UpdateCountryData = {
   type: "updateCountryData";
-  payload: CountryData;
+  payload: CountryResponse;
+  redirect?: () => void;
 };
 
 export type ActionType =

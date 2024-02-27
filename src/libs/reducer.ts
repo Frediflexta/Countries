@@ -1,9 +1,9 @@
-import { ActionType, CountryData } from "../global";
+import { ActionType, CountryResponse } from "../global";
 
 type InititalState = {
   region: string;
   country: string;
-  countryData: CountryData | null;
+  countryData: CountryResponse | null;
 };
 
 export const initialState: InititalState = {

@@ -1,6 +1,6 @@
-import { Dispatch } from "react";
+import { Dispatch, FormEvent } from "react";
 import { useDebounce } from "@uidotdev/usehooks";
-import { ActionType, CountryData } from "../global";
+import { ActionType } from "../global";
 import useCountry from "../hooks/useCountry";
 import { useNavigate } from "react-router-dom";
 
@@ -14,21 +14,22 @@ type SearchFilterProps = {
 
 const SearchFilter = ({ country, region, dispatch }: SearchFilterProps) => {
   const debounceCountry = useDebounce(country, 500);
+  const navigate = useNavigate();
 
   const { data } = useCountry(debounceCountry);
-  const navigate = useNavigate();
-  console.log({ data });
+
+  const handleFormSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Triggered =>", data?.[0]?.name.common);
+
+    if (data && data?.[0]?.name) {
+      dispatch({ type: "updateCountryData", payload: data });
+      navigate(`/countrydetails/${data?.[0]?.name.common}`);
+    }
+  };
 
   return (
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        dispatch({ type: "updateCountryData", payload: data as CountryData });
-        if (data && data.name) {
-          navigate(`/countrydetails/${data.name.common}`);
-        }
-      }}
-    >
+    <form onSubmit={handleFormSubmit}>
       <section className="items-center justify-between px-5 pt-12 sm:flex sm:px-20 ">
         <div className="relative ">
           <img

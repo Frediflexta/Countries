@@ -1,4 +1,4 @@
-import { CountryData, CountryResponse } from "../global";
+import { CountryResponse } from "../global";
 
 export const fetchAllCountries = async (): Promise<CountryResponse> => {
   const res = await fetch("https://restcountries.com/v3.1/all");
@@ -20,7 +20,9 @@ export const fetchRegions = async (
   return json;
 };
 
-export const fetchCountry = async (country: string): Promise<CountryData> => {
+export const fetchCountry = async (
+  country: string,
+): Promise<CountryResponse> => {
   const res = await fetch(
     `https://restcountries.com/v3.1/name/${country}?fullText=true`,
   );
@@ -29,6 +31,6 @@ export const fetchCountry = async (country: string): Promise<CountryData> => {
     throw new Error("Network went to shit!");
   }
 
-  const json = (await res.json()) as CountryData;
+  const json = (await res.json()) as CountryResponse;
   return json;
 };
