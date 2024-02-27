@@ -1,10 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchRegions } from "../libs/country_apis";
 
-const useRegions = ({ region }) => {
+const useRegions = (region: string) => {
   return useQuery({
     queryKey: ["regions", region],
-    queryFn: () => fetchRegions(region),
+    queryFn: ({ queryKey }) => fetchRegions(queryKey[1]),
+    enabled: !!region,
   });
 };
 
