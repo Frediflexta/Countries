@@ -70,6 +70,7 @@ export interface CountryData {
   translations: Record<string, Translation>;
   latlng: number[];
   landlocked: boolean;
+  borders: string[];
   area: number;
   demonyms: Record<string, { f: string; m: string }>;
   flag: string;
