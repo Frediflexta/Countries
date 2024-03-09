@@ -7,7 +7,7 @@ type HeaderProps = {
 
 const Header = ({ isDark, setIsDark }: HeaderProps) => {
   return (
-    <header className="flex h-28 w-full items-center justify-between bg-white px-5 leading-9 shadow dark:bg-[#2B3844] dark:text-white sm:h-20 sm:px-20">
+    <header className="flex h-28 w-full items-center justify-between bg-white px-5 leading-9 shadow dark:bg-[#2B3844]  sm:h-20 sm:px-20">
       <h3 className="text-xl font-extrabold sm:text-2xl">
         <Link to="/">Where in the world?</Link>
       </h3>

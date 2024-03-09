@@ -13,11 +13,8 @@ const Application = () => {
     initialState,
   );
 
-  // const location = useLocation();
-  console.info("Application => ", region);
-
   return (
-    <main className="w-screen font-nunito dark:bg-[#202C36] sm:w-screen">
+    <main className="h-full w-screen font-nunito dark:bg-[#202C36] dark:text-white sm:w-screen">
       <Header isDark={isDark} setIsDark={setIsDark} />
       <Routes>
         <Route
@@ -29,7 +26,7 @@ const Application = () => {
                 region={region}
                 dispatch={dispatch}
               />
-              <Countries region={region} />
+              <Countries region={region} dispatch={dispatch} />
             </>
           }
         />

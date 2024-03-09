@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { ActionType, CountryData } from "../global";
+import { Dispatch } from "react";
 
 type CountryProps = {
   name: string;
@@ -7,6 +9,8 @@ type CountryProps = {
   region: string;
   capital: string;
   alt: string;
+  data: CountryData;
+  dispatch: Dispatch<ActionType>;
 };
 
 const Country = ({
@@ -16,6 +20,8 @@ const Country = ({
   region,
   capital,
   alt,
+  dispatch,
+  data,
 }: CountryProps) => {
   const navigate = useNavigate();
 
@@ -24,7 +30,11 @@ const Country = ({
       className="h-[336px] cursor-pointer rounded-md bg-white text-[#111517] shadow-sm dark:bg-[#2B3844] dark:text-white sm:w-[264px] md:w-[264px]"
       role="presentation"
       onClick={() => {
-        navigate(`/countrydetails/${name}`);
+        // dispatch an action to set data to countryData before navigating
+        if (data && data.name) {
+          dispatch({ type: "updateCountryData", payload: [data] });
+          navigate(`/countrydetails/${name}`);
+        }
       }}
     >
       <img
