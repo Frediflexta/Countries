@@ -7,9 +7,9 @@ type CountryDetailsProps = {
 
 const CountryDetails = ({ country }: CountryDetailsProps) => {
   return (
-    <div className="sm-flex flex h-screen w-screen flex-col sm:flex-col">
-      <Link to="/" className="pl-14 sm:pl-2">
-        <button className="mb-10 mt-10 flex h-[40px] w-[136px] flex-col items-center justify-center shadow-custom dark:bg-[#2B3844] sm:m-20">
+    <div className="sm-flex flex h-full w-screen flex-col sm:flex-col">
+      <Link to="/" className="px-7 sm:pl-2">
+        <button className="shadow-custom mb-10 mt-10 flex h-[40px] w-[136px] flex-col items-center justify-center dark:bg-[#2B3844] sm:m-20">
           <figure
             className="flex items-center font-semibold"
             role="presentation"
@@ -20,14 +20,14 @@ const CountryDetails = ({ country }: CountryDetailsProps) => {
         </button>
       </Link>
       <div className="flex w-screen flex-col sm:h-screen sm:flex-row ">
-        <div className="pl-14 sm:pl-20">
+        <div className="flex justify-center sm:pl-20">
           <img
-            className="h-[229px] w-[320px] rounded-lg sm:h-[401px] sm:w-[560px]"
-            src={country?.[0].flags.svg}
+            className="h-[229px] w-[370px] rounded-lg sm:h-[401px] sm:w-[560px]"
+            src={country?.[0].flags.png}
             alt={country?.[0].flags.alt}
           />
         </div>
-        <div className="items-center justify-center pl-14 sm:pl-28">
+        <div className="items-center justify-center px-7 sm:pl-28">
           <h1 className="pb-8 pt-10 text-[32px] font-extrabold sm:pb-8 sm:pt-0">
             {country?.[0].name.common}
           </h1>
@@ -83,16 +83,18 @@ const CountryDetails = ({ country }: CountryDetailsProps) => {
               </p>
             </div>
           </div>
-          <div className="sm:pt-12">
+          <div className="pt-10 sm:pt-8">
             <span className="bold_span pt-24">Border Countries: </span>
-            {country?.[0].borders?.map((border) => (
-              <button
-                className="extra_thin_span mx-2 px-4 shadow-sm dark:bg-[#2B3844]"
-                key={border}
-              >
-                {border}
-              </button>
-            ))}
+            <div className="grid grid-cols-3">
+              {country?.[0].borders?.map((border) => (
+                <button
+                  className="extra_thin_span mx-2 my-2 px-4 shadow-sm dark:bg-[#2B3844]"
+                  key={border}
+                >
+                  {border}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
