@@ -9,7 +9,7 @@ const CountryDetails = ({ country }: CountryDetailsProps) => {
   return (
     <div className="sm-flex flex h-full w-screen flex-col sm:flex-col">
       <Link to="/" className="px-7 sm:pl-2">
-        <button className="hover:shadow-custom mb-10 mt-10 flex h-[40px] w-[136px] flex-col items-center justify-center outline-blue-500 dark:bg-[#2B3844] sm:m-20">
+        <button className="mb-10 mt-10 flex h-[40px] w-[136px] flex-col items-center justify-center outline-blue-500 hover:shadow-custom dark:bg-[#2B3844] sm:m-20">
           <figure
             className="flex items-center font-semibold"
             role="presentation"
@@ -88,7 +88,7 @@ const CountryDetails = ({ country }: CountryDetailsProps) => {
             <div className="grid grid-cols-3">
               {country?.[0].borders?.map((border) => (
                 <button
-                  className="extra_thin_span mx-2 my-2 px-4 shadow-sm dark:bg-[#2B3844]"
+                  className="extra_thin_span mx-2 my-2 px-4 shadow-sm hover:shadow-custom dark:bg-[#2B3844]"
                   key={border}
                 >
                   {border}
