@@ -20,7 +20,7 @@ const Countries = ({ region, dispatch }: CountriesProps) => {
 
   if (isLoading || regionLoading) {
     return (
-      <div className="flex h-full items-center justify-center">
+      <div className="flex h-screen items-center justify-center">
         <MagnifyingGlass
           ariaLabel="magnifying-glass-loading"
           wrapperClass="magnifying-glass-wrapper"

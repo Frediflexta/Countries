@@ -9,7 +9,7 @@ const CountryDetails = ({ country }: CountryDetailsProps) => {
   return (
     <div className="sm-flex flex h-full w-screen flex-col sm:flex-col">
       <Link to="/" className="px-7 sm:pl-2">
-        <button className="shadow-custom mb-10 mt-10 flex h-[40px] w-[136px] flex-col items-center justify-center dark:bg-[#2B3844] sm:m-20">
+        <button className="hover:shadow-custom mb-10 mt-10 flex h-[40px] w-[136px] flex-col items-center justify-center outline-blue-500 dark:bg-[#2B3844] sm:m-20">
           <figure
             className="flex items-center font-semibold"
             role="presentation"
