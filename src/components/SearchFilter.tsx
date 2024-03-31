@@ -3,6 +3,7 @@ import { useDebounce } from "@uidotdev/usehooks";
 import { ActionType } from "../global";
 import useCountry from "../hooks/useCountry";
 import { useNavigate } from "react-router-dom";
+import searchIcon from "../assets/search-icon.svg";
 
 const Regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
 
@@ -34,7 +35,7 @@ const SearchFilter = ({ country, region, dispatch }: SearchFilterProps) => {
         <div className="relative ">
           <img
             className="h-4.5 w-4.5 absolute left-5 top-1/2 -translate-y-1/2 transform text-gray-400 "
-            src="../Web/svg/search-icon.svg"
+            src={searchIcon}
             alt="search icon"
           />
           <input
