@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { CountryResponse } from "../global";
+import backIcon from "../assets/back-icon.svg";
 
 type CountryDetailsProps = {
   country: CountryResponse | null;
@@ -14,7 +15,7 @@ const CountryDetails = ({ country }: CountryDetailsProps) => {
             className="flex items-center font-semibold"
             role="presentation"
           >
-            <img src="../Web/svg/back-icon.svg" alt="go back icon" />
+            <img src={backIcon} alt="go back icon" />
             <figcaption className="pl-2 font-thin">Back</figcaption>
           </figure>
         </button>

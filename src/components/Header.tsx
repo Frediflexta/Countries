@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import darkModeIcon from "../assets/dark_mode-icon.svg";
+import lightModeIcon from "../assets/sun-2-svgrepo-com.svg";
 
 type HeaderProps = {
   isDark: boolean;
@@ -20,17 +22,9 @@ const Header = ({ isDark, setIsDark }: HeaderProps) => {
         }}
       >
         {!isDark ? (
-          <img
-            className="pr-2"
-            src="../Web/svg/dark_mode-icon.svg"
-            alt="cresent moon"
-          />
+          <img className="pr-2" src={darkModeIcon} alt="cresent moon" />
         ) : (
-          <img
-            className="pr-2"
-            src="../Web/svg/sun-2-svgrepo-com.svg"
-            alt="cresent moon"
-          />
+          <img className="pr-2" src={lightModeIcon} alt="cresent moon" />
         )}
 
         <figcaption className="pr-2 text-base font-normal">
