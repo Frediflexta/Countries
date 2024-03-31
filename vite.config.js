@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react(), svgr()],
   root: "src",
   build: {
-    outDir: "dist",
+    outDir: "../dist",
+    emptyOutDir: true,
   },
 });
